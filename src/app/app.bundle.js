@@ -127,7 +127,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('test');\n\n//# sourceURL=webpack:///./src/study/1day/vanilla.js?");
+eval("// function Person(name) {\n//     this.name = name;\n// }\n// var foo = new Person('wook');\n// Person.prototype.sayHello = function() {\n//     console.log(this.name + '하이!');\n// }\n// foo.sayHello();\n(function () {\n  function Person(name) {\n    this.name = name;\n  }\n\n  var foo = new Person('김명욱');\n\n  Person.prototype.sayHello = function () {\n    var mySelf = '안녕하세요? ' + this.name + ' 입니다.';\n    return function () {\n      console.log(mySelf);\n    }();\n  };\n\n  foo.sayHello();\n})();\n\n//# sourceURL=webpack:///./src/study/1day/vanilla.js?");
 
 /***/ })
 
