@@ -1,5 +1,5 @@
 import './assets/stylesheets/styles.scss'; //sass 연결
-import './study/1day/vanilla.js'; //1day
+import './study/2day/vanilla.js'; //1day
 
 import $ from 'jquery';
 const DOM = {

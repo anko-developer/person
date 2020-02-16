@@ -116,18 +116,18 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/stylesheets/styles.scss */ \"./src/assets/stylesheets/styles.scss\");\n/* harmony import */ var _assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _study_1day_vanilla_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./study/1day/vanilla.js */ \"./src/study/1day/vanilla.js\");\n/* harmony import */ var _study_1day_vanilla_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_study_1day_vanilla_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);\n //sass 연결\n\n //1day\n\n\nvar DOM = {\n  body: '#Body'\n};\njquery__WEBPACK_IMPORTED_MODULE_2___default()(DOM.body).append('<p>Webpack</p>'); // $(DOM.body).addClass('__block');\n// $(DOM.body).css('background-color', '#ffd200');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/stylesheets/styles.scss */ \"./src/assets/stylesheets/styles.scss\");\n/* harmony import */ var _assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _study_2day_vanilla_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./study/2day/vanilla.js */ \"./src/study/2day/vanilla.js\");\n/* harmony import */ var _study_2day_vanilla_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_study_2day_vanilla_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);\n //sass 연결\n //1day\n\n\nconst DOM = {\n    body: '#Body'\n};\n\njquery__WEBPACK_IMPORTED_MODULE_2___default()(DOM.body).append('<p>Webpack</p>');\n// $(DOM.body).addClass('__block');\n// $(DOM.body).css('background-color', '#ffd200');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/study/1day/vanilla.js":
+/***/ "./src/study/2day/vanilla.js":
 /*!***********************************!*\
-  !*** ./src/study/1day/vanilla.js ***!
+  !*** ./src/study/2day/vanilla.js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// function Person(name) {\n//     this.name = name;\n// }\n// var foo = new Person('wook');\n// Person.prototype.sayHello = function() {\n//     console.log(this.name + '하이!');\n// }\n// foo.sayHello();\n(function () {\n  function Person(name) {\n    this.name = name;\n  }\n\n  var foo = new Person('김명욱');\n\n  Person.prototype.sayHello = function () {\n    var mySelf = '안녕하세요? ' + this.name + ' 입니다.';\n    return function () {\n      console.log(mySelf);\n    }();\n  };\n\n  foo.sayHello();\n})();\n\n//# sourceURL=webpack:///./src/study/1day/vanilla.js?");
+eval("var funcs = [];\n\n// for(var i = 0; i < 3; i++) {\n//     (function(index){\n//         funcs.push(function() { console.log(index); });\n//     }(i));\n// }\n\n// let 키워드는 블록레벨 스코프이므로 아래와 같이 사용가능, 클로저 기능까지\nfor (let i = 0; i < 3; i++) {\n    funcs.push(function() { console.log(i); });\n}\n\nfor(var j = 0; j < 3; j++) {\n    console.dir(funcs[j]);\n    funcs[j]();\n}\n\n\n// const는 재할당을 하게 되면 에러가 발생하지만 \nconst user = {\n    name : 'anko'\n}\n\n// 객체의 내용은 변경할 수 있다.\nuser.name = 'wook';\nconsole.log(user.name);\n\n/**\n * ES6를 사용한다면 var 키워드는 사용하지 않는다.\n * 재할당이 필요한 경우에 한정해 let 키워드를 사용한다. 이때 변수의 스코프는 최대한 좁게 만든다.\n * 변경이 발생하지 않는(재할당이 필요 없는 상수) 원시 값과 객체에는 const 키워드를 사용한다. const 키워드는 재할당을 금지하므로 var, let 보다 안전하다.\n */\n\n//# sourceURL=webpack:///./src/study/2day/vanilla.js?");
 
 /***/ })
 
