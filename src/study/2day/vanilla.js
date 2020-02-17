@@ -33,6 +33,7 @@ console.log(user.name);
  */
 
 
+ //전역변수 중복을 막기위해 즉시실행 함수로 감싸주고 작업
 (function(){
     var MYAPP = {};
     MYAPP.me = {
@@ -43,3 +44,6 @@ console.log(user.name);
 }());
 
  console.log('test2: ' + MYAPP.me.name);
+
+
+ // 2020.02.17
