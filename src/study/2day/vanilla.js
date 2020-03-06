@@ -43,7 +43,4 @@ console.log(user.name);
     console.log('test1: ' + MYAPP.me.name);
 }());
 
- console.log('test2: ' + MYAPP.me.name);
-
-
- // 2020.02.17
+ //console.log('test2: ' + MYAPP.me.name);
