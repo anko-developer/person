@@ -47,3 +47,21 @@
     }
     obj.foo();
 }());
+
+(function(){
+    //'use strict';
+    function Person(arg) {
+        if (!(this instanceof arguments.callee)) {
+            return new arguments.callee(arg);
+        }
+
+        this.value = arg ? arg : 0;
+    }
+
+    var test1 = new Person(100);
+    var test2 = Person(10);
+
+    console.log(test1.value);
+    console.log(test2.value);
+    
+}());
