@@ -25,10 +25,9 @@
 
 
 
-
+    //ex 1)
     var box = document.querySelector('.box');
     var toggleBtn = document.querySelector('.toggle');
-
     var toggle = (function(){
         var state = false;
 
@@ -37,6 +36,57 @@
             state = !state;
         };
     }());
+    //toggleBtn.onclick = toggle;
+
+
+    //ex 2)
+    var incleaseBtn = document.getElementById('inclease');
+    var count = document.getElementById('count');
+
+    // var inclease = (function(){
+    //     var counter = 0;
+
+    //     return function(){
+    //         ++counter;
+    //         count.innerHTML = counter;
+    //     }
+    // }());
+
+    // incleaseBtn.onclick = inclease;
+
+    var inclease = (function(){
+        var counter = 0;
+        return function() {
+            return ++counter;
+        }
+    }());
+
+    incleaseBtn.onclick = function() {
+        count.innerHTML = inclease();
+    }
+
+
+    //ex 3)
+    function makeCounter(predicate) {
+        var num = 0;
+        return function() {
+            num = predicate(num);
+            return num;
+        }
+    }
+
+    function plus(n) {
+        return ++n;
+    }
+    function minus(n) {
+        return --n;
+    }
+
+    const plusBtn = makeCounter(plus);
+    console.log(plusBtn());
+
+    //plusBtn 함수와는 별개의 독립된 렉시컬 환경을 갖기 때문에 카운터 상태가 연동하지 않는다.
+    const minusBtn = makeCounter(minus);
+    console.log(minusBtn());
     
-    toggleBtn.onclick = toggle;
 }());
