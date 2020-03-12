@@ -88,5 +88,4 @@
     //plusBtn 함수와는 별개의 독립된 렉시컬 환경을 갖기 때문에 카운터 상태가 연동하지 않는다.
     const minusBtn = makeCounter(minus);
     console.log(minusBtn());
-    
 }());
