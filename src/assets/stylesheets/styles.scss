@@ -1,5 +1,18 @@
-@import './_default.scss';
+@import './default';
 
 body {font-size:14px;color:$initial-color;background-color:#eee}
 
 #Body>p {font-size:20px}
+
+#Box {
+    width:200px;
+    height:100px;
+    border:1px solid red;
+    line-height:100px;
+    font: {
+        family:'맑은 고딕', 'Malgun gothic';
+        weight:bold;
+        size:20px;
+    }
+    text-align:center;
+}
