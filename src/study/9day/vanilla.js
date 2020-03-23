@@ -32,7 +32,7 @@
         return --n;
     });
 
-    const dog = new Person('Anko'); // 우리집 강아지 이름
+    const dog = new Person('Anko'); // 우리집 강아지 이름 
 
     console.log(dog.say(dog.plus)); // Anko가 1번 짖었다.
     console.log(dog.say(dog.plus)); // Anko가 2번 짖었다.
