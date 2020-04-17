@@ -7,27 +7,30 @@
     <title>Anko-Script</title>
     <link rel="stylesheet" href="./app/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body id="Body">
-    <div id="app" v-bind:title="message">
-        {{message}}
-        <my-title></my-title>
+    <div id="app">
+        <header>
+            <h3>
+                {{message}},
+                {{dog}}
+            </h3>
+        </header>
+        <section>
+            <p v-bind:id="uid"></p>
+            <button v-on:click="clickBtn">alert</button>
+            <!-- <button @click="clickBtn">alert</button> -->
+            <button @click="testBtn">Test</button>
+            <ul v-if="flag">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
     </div>
-    
     <script src="./app/app.bundle.js"></script>
-    <script>
-        var title = {
-            template : '<h1>test title</h1>'
-        }
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message:  '타이틀'
-            },
-            components: {
-                'my-title': title
-            }
-        })
-    </script>
+    <script src="./study/vue/app.js"></script>
 </body>
 </html>
